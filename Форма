@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" href="">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"><script src="https://www.google.com/recaptcha/api.js"></script>
+</head>
+<style type="text/css">
+    .width {    width: 60%; margin: auto; }
+    .width_imput {    width: 400px;}
+    .width_phone7 {    width: 50px;}
+    .width_phone {    width: 350px;}
+    .width1 {    width: 80%;} .width2 {    width: 40%;}
+    .border{border:1px solid black; box-shadow:3px 3px 3px black;}
+</style>
+<body>
+
+<button class="but button is-primary m-3" data-toggle-id="subscribe-mail" id="subscribe" >Регистрация на сайте по продаже автозапчастей</button>
+<script type="text/javascript">
+
+  document.addEventListener("DOMContentLoaded", function(){ 
+    subscribe.addEventListener("click", f_hidden);
+    inpt1.addEventListener("click", f_inpt);
+}    );
+  function f_hidden()
+  {
+    frm.hidden = !frm.hidden;    
+  }
+  function f_inpt()
+  {
+    let id = event.target.dataset.toggleId;
+    if (id=="true") inpt.classList.remove("is-hidden");
+    else  inpt.classList.add("is-hidden");
+  }
+</script>
+<form  id="frm" hidden class="field has-background-light width p-3 mb-3 border">
+    <label class="label">Регистрация</label>
+
+
+        <div class="field pl-6">
+            <div class="field">
+                <label class="label">Вы регистрируетесь как</label>
+            </div>
+            <div class="field-body block">
+                <div class="field" id="inpt1">
+                      <div class="control">
+                        <label class="radio">
+                          <input type="radio" name="member" checked="true" data-toggle-id="true">
+                          Покупатель
+                        </label>
+                        </div><div class="control">
+                        <label class="radio">
+                          <input type="radio" name="member" data-toggle-id="false">
+                          Поставщик
+                        </label>
+                      </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="field is-horizontal">
+            <div class="field-label">
+                Эл. почта
+              
+            </div>
+            <div class="field-body">
+                <div class="field">
+                    <div class="control width_imput">
+                        <input class="input" type="email">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="field">
+            <label class="label">Название организации</label>
+            <div class="control">
+                <div class="field is-horizontal">
+                    <div class="field-label is-right">
+                        ИП или Юр.лицо
+                    </div>
+                    <div class="field-body">
+                        <div class="field">
+                            <div class="control width_imput">
+                                <input class="input" type="email">
+                            </div>
+                        </div>
+                    </div>
+                </div>        
+                <div class="field is-horizontal">
+                    <div class="field-label is-right">
+                        ИНН
+                    </div>
+                    <div class="field-body">
+                        <div class="field">
+                            <div class="control width_imput">
+                                <input class="input" type="email">
+                            </div>
+                        </div>
+                    </div>
+                </div>                       
+            </div>            
+        </div>     
+
+
+        <div class="field">
+            <label class="label">Фактический адрес</label>
+            <div class="control">
+                <div class="field is-horizontal">
+                    <div class="field-label is-right">
+                        Ваш город
+                    </div>
+                    <div class="field-body">
+                        <div class="field">
+                            <div class="control width_imput">
+                                <input class="input" type="text">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="field is-horizontal">
+                    <div class="field-label is-right">
+                        Улица
+                    </div>
+                        <div class="field-body">
+                              <div class="field is-horizontal">
+                            
+                                    <div class="field-body">
+                                        <div class="field">
+                                            <div class="control width1">
+                                                <input class="input" type="text">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>                                
+                                <div class="field is-horizontal">
+                                    <div class="field-label is-right">
+                                        Дом/строен.
+                                    </div>
+                                    <div class="field-body">
+                                        <div class="field">
+                                            <div class="control width1">
+                                                <input class="input" type="text">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="field is-horizontal">
+                                    <div class="field-label is-right">
+                                        Офис
+                                    </div>
+                                    <div class="field-body">
+                                        <div class="field">
+                                            <div class="control width2">
+                                                <input class="input" type="text">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                        </div>
+                         
+                </div>
+
+                <div class="field is-horizontal">
+                             <div class="field-label">
+                        Телефон
+                    </div>
+                  <div class="field-body">
+                    <div class="field is-expanded">
+                      <div class="field has-addons">
+                        <p class="control">
+                          <a class="button width_phone7 is-static">
+                            +7
+                          </a>
+                        </p>
+                        <p class="control width_phone">
+                          <input class="input" type="tel" >
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div> 
+                <div class="field is-horizontal" id="inpt">
+                    <div class="field-label is-right">
+                        Сайт Вашей компании
+                    </div>
+                    <div class="field-body">
+                        <div class="field">
+                            <div class="control width_imput">
+                                <input class="input" type="text">
+                            </div>
+                        </div>
+                    </div>
+                </div>                       
+            </div>            
+        </div>
+
+        <div class="field">
+            <label class="label">Название организации</label>
+            <div class="control">
+                <div class="field is-horizontal">
+                    <div class="field-label is-right">
+                        Магазин
+                    </div>
+                    <div class="field-body">
+                        <div class="field">
+                            <label class="checkbox">
+                              <input type="checkbox" checked="true">
+                            </label>
+                        </div>
+                    </div>
+                </div>        
+                <div class="field is-horizontal">
+                    <div class="field-label is-right">
+                        Региональная сеть магазинов
+                    </div>
+                    <div class="field-body">
+                        <div class="field">
+                            <label class="checkbox">
+                              <input type="checkbox" checked="true">
+                            </label>
+                        </div>
+                    </div>
+                </div> 
+                <div class="field is-horizontal">
+                    <div class="field-label is-right">
+                        Федеральная сеть магазинов
+                    </div>
+                    <div class="field-body">
+                        <div class="field">
+                            <label class="checkbox">
+                              <input type="checkbox" checked="true">
+                            </label>
+                        </div>
+                    </div>
+                </div> 
+                <div class="field is-horizontal">
+                    <div class="field-label is-right">
+                        Интернет-магазин
+                    </div>
+                    <div class="field-body">
+                        <div class="field">
+                            <label class="checkbox">
+                              <input type="checkbox">
+                            </label>
+                        </div>
+                    </div>
+                </div> 
+                <div class="field is-horizontal">
+                    <div class="field-label is-right">
+                        Автосервис
+                    </div>
+                    <div class="field-body">
+                        <div class="field">
+                            <label class="checkbox">
+                              <input type="checkbox">
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="field is-horizontal">
+                    <div class="field-label is-right">
+                        Прочее
+                    </div>
+                    <div class="field-body">
+                        <div class="field">
+                            <div class="control width_imput">
+                                <input class="input" type="text">
+                            </div>
+                        </div>
+                    </div>
+                </div>  
+
+            </div>            
+        </div> 
+
+        <div class="field">
+            <label class="label"></label>
+            <div class="control">
+                <div class="field is-horizontal">
+                    <div class="field-label is-right">
+                        
+                    </div>
+                    <div class="field-body">
+                        <div class="field">
+                            <div class="control">
+                                <form method="post" action="#">
+                                    <div class="g-recaptcha" data-sitekey="КЛЮЧ_САЙТА"></div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>        
+                      
+            </div>
+        <div class="control">
+            <a class="button is-info js-modal-trigger" data-target="modal-js-example">Отправить заявку</a>
+        </div>                        
+        </div>        
+</form>
+<div class="modal" id="modal-js-example">
+  <div class="modal-background"></div>
+  <div class="modal-card">
+    <header class="modal-card-head">
+      <p class="modal-card-title"></p>
+      <button class="delete" aria-label="close"></button>
+    </header>
+    <section class="modal-card-body">
+      <div class="has-text-centered">Регистрация прошла успешно!</div>
+    </section>
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  // Functions to open and close a modal
+  function openModal($el) {
+    frm.hidden=true;
+    $el.classList.add('is-active');
+  }
+
+  function closeModal($el) {
+
+    $el.classList.remove('is-active');
+  }
+
+  function closeAllModals() {
+    (document.querySelectorAll('.modal') || []).forEach(($modal) => {
+      closeModal($modal);
+    });
+  }
+
+  // Add a click event on buttons to open a specific modal
+  (document.querySelectorAll('.js-modal-trigger') || []).forEach(($trigger) => {
+    const modal = $trigger.dataset.target;
+    const $target = document.getElementById(modal);
+
+    $trigger.addEventListener('click', () => {
+      
+      openModal($target);
+    });
+  });
+
+  // Add a click event on various child elements to close the parent modal
+  (document.querySelectorAll('.modal-background, .modal-close, .modal-card-head .delete, .modal-card-foot .button') || []).forEach(($close) => {
+    const $target = $close.closest('.modal');
+
+    $close.addEventListener('click', () => {
+      closeModal($target);
+    });
+  });
+
+  // Add a keyboard event to close all modals
+  document.addEventListener('keydown', (event) => {
+    const e = event || window.event;
+
+    if (e.keyCode === 27) { // Escape key
+      closeAllModals();
+    }
+  });
+});
+</script>
+</body>
+</html>
